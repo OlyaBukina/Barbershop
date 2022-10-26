@@ -1,0 +1,218 @@
+:root {
+  --dark-main-text-color: rgba(48, 48, 48, 1);
+  --darc-secondary-text-color: rgba(85, 85, 85, 1);
+  --accent-color: rgba(255, 108, 0, 1);
+  --bg-color: #f7f7f7;
+  --light-main-color: rgba(255, 255, 255, 1);
+  --light-secondary-color: rgba(157, 164, 189, 1);
+}
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: var(--dark-main-text-color);
+}
+ul {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+button {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.button {
+  width: 160px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--light-main-color);
+  background-color: inherit;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  cursor: pointer;
+}
+.button:hover,
+.buttom:focus {
+  background-color: var(--accent-color);
+}
+/* Header */
+.header,
+.hero {
+  background-color: rgb(69, 69, 69);
+}
+.header .link {
+  color: var(--light-main-color);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.header .link:hover,
+.header .link:focus {
+  color: var(--accent-color);
+}
+
+/* Hero */
+.social-list .link {
+  font-size: 11px;
+  font-weight: 600;
+  color: inherit;
+}
+.social-list .link:hover,
+.social-list .link:focus {
+  color: var(--accent-color);
+}
+.hero-pre-title {
+  color: var(--light-secondary-color);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.hero-title {
+  color: var(--light-main-color);
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+.hero-text {
+  color: var(--light-secondary-color);
+  line-height: 1.7;
+}
+
+/* Content on the page */
+.pre-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.title {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+.after-title {
+  color: var(--darc-secondary-text-color);
+  line-height: 1.7;
+}
+.text {
+  color: var(--darc-secondary-text-color);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* About section */
+.about.button {
+  color: var(--dark-main-text-color);
+}
+.about.buttom:focus,
+.about.button:hover {
+  color: var(--light-main-color);
+}
+
+/* Prices */
+.prices {
+  background-color: rgb(69, 69, 69);
+}
+.prices .pre-title {
+  color: var(--light-secondary-color);
+}
+.prices .title {
+  color: var(--light-main-color);
+}
+.price-list p {
+  color: var(--light-secondary-color);
+  line-height: 1.7;
+}
+
+/* Reasons section */
+.features-list .number {
+  font-weight: 700;
+  font-size: 42px;
+  letter-spacing: 0.05em;
+}
+.features-list .sign {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--accent-color);
+}
+.features-list .text {
+  font-weight: 600;
+  font-size: 11px;
+}
+
+/* Our barbers */
+.barber-title {
+  font-weight: 400;
+}
+.barbers-list .text {
+  font-size: 14px;
+  color: var(--accent-color);
+}
+
+/* Contacts */
+.contacts {
+  background-color: rgb(69, 69, 69);
+}
+.contacts .title {
+  color: var(--light-main-color);
+}
+.contacts-list .link {
+  font-family: inherit;
+  font-style: normal;
+  line-height: 1.7;
+  color: var(--light-secondary-color);
+}
+.contacts-list .link:hover,
+.contacts-list .link:focus {
+  color: var(--light-main-color);
+}
+.contacts-list .address {
+  font-weight: 700;
+}
+.contacts .pre-title {
+  color: var(--light-main-color);
+}
+.contacts .after-title {
+  color: var(--light-secondary-color);
+}
+
+/* Footer */
+.copyright {
+  font-weight: 600;
+  font-size: 11px;
+  color: var(--light-secondary-color);
+}
