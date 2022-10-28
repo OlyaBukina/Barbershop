@@ -5,6 +5,7 @@
   --bg-color: #f7f7f7;
   --light-main-color: rgba(255, 255, 255, 1);
   --light-secondary-color: rgba(157, 164, 189, 1);
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   margin: 0;
@@ -62,6 +63,7 @@ img {
   border: 1px solid var(--accent-color);
   border-radius: 25px;
   cursor: pointer;
+  transition: background-color 250ms var(--timing-function);
 }
 .button:hover,
 .buttom:focus {
@@ -71,6 +73,7 @@ img {
   font-size: 11px;
   font-weight: 600;
   color: inherit;
+  transition: color 250ms var(--timing-function);
 }
 .social-list .link:hover,
 .social-list .link:focus {
@@ -136,6 +139,7 @@ img {
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.1em;
+  transition: color 250ms var(--timing-function);
 }
 
 .hero .link:hover,
@@ -297,7 +301,8 @@ img {
 .features-list .item {
   padding: 20px 24px;
   text-align: center;
-  flex-basis: calc((100%-30px) / 2);
+  width: 170px;
+  /* flex-basis: calc((100%-30px) / 2); */
   background-color: var(--bg-color);
 }
 .features-list .number {
@@ -374,13 +379,25 @@ img {
   background-color: rgb(69, 69, 69);
 }
 .contacts .title {
+  margin-bottom: 44px;
   color: var(--light-main-color);
 }
+.contacts-list {
+  display: flex;
+  max-width: 255px;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 70px;
+}
 .contacts-list .link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   font-family: inherit;
   font-style: normal;
   line-height: 1.7;
   color: var(--light-secondary-color);
+  transition: color 250ms var(--timing-function);
 }
 .contacts-list .link:hover,
 .contacts-list .link:focus {
@@ -390,10 +407,23 @@ img {
   font-weight: 700;
 }
 .contacts .pre-title {
+  display: flex;
+  gap: 20px;
+  align-items: center;
   color: var(--light-main-color);
+  margin-bottom: 20px;
+}
+.contacts .pre-title::before {
+  content: "";
+  height: 1px;
+  width: 60px;
+  background-color: var(--light-secondary-color);
 }
 .contacts .after-title {
   color: var(--light-secondary-color);
+}
+.contacts .icon {
+  stroke: currentColor;
 }
 
 /* Footer */
@@ -407,10 +437,21 @@ img {
   padding: 56px 15px;
   margin: 0 auto;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
 }
 .footer .social-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.footer .social-list::before {
+  content: "";
+  height: 1px;
+  width: 60px;
+  background-color: var(--light-secondary-color);
+}
+.social-list li {
   display: flex;
   align-items: center;
 }
