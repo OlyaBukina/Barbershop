@@ -1,0 +1,50 @@
+.about-container {
+    @extend %container;
+    padding-top: 84px;
+    padding-bottom: 84px;
+    display: flex;
+    gap: 30px;
+}
+
+.img-content {
+    display: none;
+    // display: flex;
+    // gap: 30px;
+}
+
+.about-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 100px;
+}
+
+.about-description__pre-title {
+    @extend %pre-title;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.about-description__title {
+    @extend %title;
+    font-size: 28px;
+}
+
+.about-description__after-title {
+    @extend %after-title;
+}
+
+.about-description__text {
+    @extend %text;
+}
+
+.about-description__button {
+    margin-top: 15px;
+    color: $dark-main-text-color;
+
+    &:focus,
+    &:hover {
+        color: $light-main-color;
+    }
+}

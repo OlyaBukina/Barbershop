@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    color: var(--dark-main-text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.social-list .link {
+    font-size: 11px;
+    font-weight: 600;
+    color: inherit;
+    transition: color 250ms var(--timing-function);
+}
+
+.social-list .link:hover,
+.social-list .link:focus {
+    color: var(--accent-color);
+}
