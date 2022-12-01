@@ -1,6 +1,6 @@
 @import "./base/normalize";
-@import "./base/common";
 @import "./utils/variables";
+@import "./base/common";
 @import "./utils/breakpoints";
 @import "./utils/placeholder";
 @import "./utils/mixins";
@@ -9,3 +9,8 @@
 @import "./components/hero";
 @import "./components/about";
 @import "./components/price";
+@import "./components/reasons";
+@import "./components/barbers";
+@import "./components/aux";
+@import "./components/booking-contacts";
+@import "./components/footer";

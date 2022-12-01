@@ -5,15 +5,26 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+		margin: 0 auto;
 	background-image:
 		linear-gradient(to right,
 			$hero-gradient-color,
 			$hero-gradient-color),
 		url(../images/hero-mobile-bg.jpg);
-	background-size: 480px;
+	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-
+	
+	@media (min-device-pixel-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution: 2dppx) {
+			background-image:
+				linear-gradient(to right,
+					$hero-gradient-color,
+					$hero-gradient-color),
+				url(../images/hero-mobile-bg@2x.jpg);
+			;
+		}
 }
 
 .hero-container {
@@ -47,6 +58,9 @@
 	@extend %title;
 	color: $light-main-color;
 	font-size: 48px;
+	@media screen and (max-width: 374px) {
+			font-size: 40px;
+		}
 
 }
 

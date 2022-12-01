@@ -1,0 +1,46 @@
+.footer {
+    padding: 62px 0;
+}
+
+.footer__container {
+    @extend %container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__copyright {
+    font-weight: 600;
+    font-size: 11px;
+    color: $light-secondary-color;
+}
+
+.footer__social-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    &::before {
+        content: "";
+        height: 1px;
+        width: 60px;
+        background-color: $dark-main-text-color;
+
+        @media screen and (max-width:374px) {
+            width: 0;
+        }
+    }
+
+}
+
+.footer__link {
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}

@@ -1,0 +1,18 @@
+.aux {
+    @extend %section-padding;
+}
+
+.aux__container {
+    @extend %container;
+}
+
+.aux__pre-title {
+    @extend %pre-title;
+    margin-bottom: 71px;
+}
+
+.aux__images {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
