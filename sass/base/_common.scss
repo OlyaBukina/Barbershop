@@ -56,3 +56,32 @@ img {
             color: $accent-color;
         }
 }
+
+.small-social-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    &::before {
+        content: "";
+        height: 1px;
+        width: 60px;
+        background-color: $dark-main-text-color;
+
+        @media screen and (max-width:374px) {
+            width: 0;
+        }
+    }
+}
+
+.small-social-list-link {
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}

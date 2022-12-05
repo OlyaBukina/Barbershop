@@ -42,7 +42,7 @@
     gap: 30px;
 
     @media screen and (max-width: 424px) {
-        flex-direction: column;
+        // flex-direction: column;
     }
 
     // flex-basis: calc((100% - 30px) / 2);
@@ -55,11 +55,18 @@
     text-align: center;
     flex-basis: calc((100% - 30px) / 2);
     background-color: $bg-color;
+    @media screen and (max-width: 424px) {
+        padding: 10px 15px;
+        height: 100px;
+
+    }
 
     &:nth-child(2n) {
         margin-top: 35px;
+        @media screen and (max-width: 374px) {
+            margin-top: 25px;
+        }
     }
-
 }
 
 .features-list__number {
@@ -67,6 +74,9 @@
     font-weight: 700;
     font-size: 42px;
     letter-spacing: 0.05em;
+    @media screen and (max-width: 424px) {
+        font-size: 36px;
+    }
 }
 
 
@@ -85,4 +95,7 @@
     @extend %text;
     font-weight: 600;
     font-size: 11px;
+    @media screen and (max-width: 424px) {
+       font-size: 8px;
+    }
 }

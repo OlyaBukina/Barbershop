@@ -312,6 +312,33 @@ img {
   color: rgb(255, 108, 0);
 }
 
+.small-social-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.small-social-list::before {
+  content: "";
+  height: 1px;
+  width: 60px;
+  background-color: rgb(48, 48, 48);
+}
+@media screen and (max-width: 374px) {
+  .small-social-list::before {
+    width: 0;
+  }
+}
+
+.small-social-list-link {
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: inherit;
+}
+.small-social-list-link:hover, .small-social-list-link:focus {
+  color: rgb(255, 108, 0);
+}
+
 .footer__container, .booking-contacts__container, .aux__container, .barbers__container, .reasons__container, .price__container, .about__container, .hero-container, .page-header__container {
   margin: 0 auto;
   padding: 0 31px;
@@ -456,8 +483,22 @@ img {
 
 .header-contacts {
   display: flex;
-  align-items: center;
-  gap: 40px;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.header-contacts__link {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  color: inherit;
+}
+
+.header-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 64px;
 }
 
 .header-nav__link {
@@ -469,6 +510,76 @@ img {
 }
 .header-nav__link:hover, .header-nav__link:focus {
   color: rgb(255, 108, 0);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(25, 28, 38, 0.2);
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+}
+
+.mobile-menu--is-open {
+  transform: translateX(0);
+}
+
+.mobile-menu--link {
+  color: rgb(48, 48, 48);
+  font-size: 18px;
+}
+
+.mobile-menu__container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 337px;
+  background-color: rgb(255, 255, 255);
+  padding: 118px 31px 48px 40px;
+}
+
+.mobile-menu--cross {
+  position: absolute;
+  top: 48px;
+  right: 31px;
+}
+
+.mobile-menu--button {
+  width: 194px;
+  margin-bottom: 64px;
+}
+
+.mobile-menu__small-social-list-wrapper {
+  position: relative;
+  width: 192px;
+}
+
+.mobile-menu__small-social-list {
+  flex-wrap: wrap;
+  row-gap: 24px;
+  align-content: flex-end;
+  flex-direction: column;
+  align-items: baseline;
+}
+.mobile-menu__small-social-list::before {
+  position: absolute;
+  top: 14px;
+  left: 0;
+}
+@media screen and (max-width: 374px) {
+  .mobile-menu__small-social-list {
+    align-content: flex-start;
+  }
+}
+
+.mobile-menu__small-social-list-link {
+  font-size: 14px;
 }
 
 .page-hero {
@@ -657,12 +768,6 @@ img {
   flex-wrap: wrap;
   gap: 30px;
 }
-@media screen and (max-width: 424px) {
-  .features-list {
-    flex-direction: column;
-  }
-}
-
 .features-list__item {
   height: 133px;
   padding: 20px 35px;
@@ -670,8 +775,19 @@ img {
   flex-basis: calc((100% - 30px) / 2);
   background-color: #f7f7f7;
 }
+@media screen and (max-width: 424px) {
+  .features-list__item {
+    padding: 10px 15px;
+    height: 100px;
+  }
+}
 .features-list__item:nth-child(2n) {
   margin-top: 35px;
+}
+@media screen and (max-width: 374px) {
+  .features-list__item:nth-child(2n) {
+    margin-top: 25px;
+  }
 }
 
 .features-list__number {
@@ -679,6 +795,11 @@ img {
   font-weight: 700;
   font-size: 42px;
   letter-spacing: 0.05em;
+}
+@media screen and (max-width: 424px) {
+  .features-list__number {
+    font-size: 36px;
+  }
 }
 
 .features-list__sign {
@@ -694,6 +815,11 @@ img {
 .features-list__text {
   font-weight: 600;
   font-size: 11px;
+}
+@media screen and (max-width: 424px) {
+  .features-list__text {
+    font-size: 8px;
+  }
 }
 
 .barbers {
@@ -921,31 +1047,4 @@ img {
   font-weight: 600;
   font-size: 11px;
   color: rgb(157, 164, 189);
-}
-
-.footer__social-list {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-.footer__social-list::before {
-  content: "";
-  height: 1px;
-  width: 60px;
-  background-color: rgb(48, 48, 48);
-}
-@media screen and (max-width: 374px) {
-  .footer__social-list::before {
-    width: 0;
-  }
-}
-
-.footer__link {
-  font-weight: 600;
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  color: inherit;
-}
-.footer__link:hover, .footer__link:focus {
-  color: rgb(255, 108, 0);
 }/*# sourceMappingURL=main.css.map */
