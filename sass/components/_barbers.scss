@@ -6,6 +6,14 @@
 .barbers__container {
     @extend %container;
 
+    @media screen and (min-width: $tablet) {
+        padding: 0 159px
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding: 0 15px;
+    }
+
 }
 
 .barbers__pre-title {
@@ -25,16 +33,22 @@
     display: flex;
     flex-direction: column;
     gap: 64px;
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+        gap: 30px;
+    }
 }
 
 .barbers-list__item {
     flex-basis: calc(100% - 62px);
     text-align: center;
+
+    @media screen and (min-width: $desktop) {
+        flex-basis: calc((100% - 60px)/3);
+    }
 }
 
-// .barber-info {
-//     // text-align: center;
-// }
 
 .barbers-list__img {
     margin-bottom: 30px;

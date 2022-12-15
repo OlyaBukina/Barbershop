@@ -1,24 +1,38 @@
 // Booking-form
+.booking-contacts {
+    @media screen and (min-width: $desktop) {
+        max-width: 1600px;
+        background-color: $booking-bg-color;
+        margin: 0 auto;
+
+    }
+}
+
 .booking-contacts__container {
     @extend %container;
     background-color: $booking-bg-color;
-    // width: 480px;
-    // margin: 0 auto;
 
-
-    // @media screen and (min-width:$desktop) {
-    //     width: $desktop;
-    //     margin: 0 auto;
-    //     padding: 0 31px;
-    // }
+    @media screen and (min-width:$desktop) {
+        background: none;
+        display: flex;
+        gap: 30px;
+    }
 }
 
 .booking {
     @extend %section-padding;
+
+    @media screen and (min-width: $desktop) {
+        flex-basis: calc((100% - 30px)/2);
+    }
 }
 
 .booking__container {
-    text-align: center
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+        text-align: left;
+    }
 }
 
 
@@ -32,11 +46,19 @@
 .booking-form {
     display: flex;
     flex-direction: column;
-    gap: 44px;
+    row-gap: 44px;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        column-gap: 30px;
+    }
 }
 
 .booking-form__field {
     height: 24px;
+    flex-basis: calc((100% - 30px)/2);
     padding-bottom: 8px;
     background-color: transparent;
     border: none;
@@ -67,18 +89,26 @@
 .booking-form__field--textarea {
     height: 76px;
     resize: none;
+
+    @media screen and (min-width:$tablet) {
+        flex-basis: 100%;
+    }
 }
 
 .booking-form__button {
     margin: 0 auto;
     color: $light-main-color;
+
+    @media screen and (min-width: $tablet) {
+        margin: 0;
+    }
 }
 
 // Contacts section
 .contacts {
     @extend %section-padding;
     min-height: 496px;
-    max-width: 480px;
+    max-width: $mobile;
     background-image: url(../images/contacts-mobile-bg.png),
         linear-gradient(to right, $booking-bg-color, $booking-bg-color);
     background-size: cover;
@@ -94,10 +124,64 @@
             linear-gradient(to right, $booking-bg-color,
                 $booking-bg-color);
     }
+
+    @media screen and (min-width: $tablet) {
+        min-height: 449px;
+        max-width: $tablet;
+        background-image: url(../images/contacts-tablet-bg.png),
+            linear-gradient(to right, $booking-bg-color, $booking-bg-color);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/contacts-tablet-bg@2x.png),
+                linear-gradient(to right, $booking-bg-color,
+                    $booking-bg-color);
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        min-height: 634px;
+        min-width: 785px;
+        margin: 0 -215px 0 0;
+        padding: 130px 0 120px 100px;
+        background-image: url(../images/contacts-desktop-bg.png),
+            linear-gradient(to right, $booking-bg-color, $booking-bg-color);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/contacts-desktop-bg@2x.png),
+                linear-gradient(to right, $booking-bg-color,
+                    $booking-bg-color);
+        }
+    }
 }
 
 .contacts__container {
     padding: 0 31px;
+
+    @media screen and (min-width: $desktop) {
+        padding: 0;
+    }
+}
+
+.contacts-wrapper {
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: column;
+    }
+}
+
+.contacts-wrapper__item {
+    @media screen and (min-width: $tablet) {
+        flex-basis: calc((100% - 30px)/2);
+    }
 }
 
 .contacts-list {
@@ -106,6 +190,10 @@
     flex-direction: column;
     gap: 20px;
     margin-bottom: 70px;
+
+    @media screen and (min-width: $tablet) {
+        margin: 0;
+    }
 }
 
 .contacts-list__link {

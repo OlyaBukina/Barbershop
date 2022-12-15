@@ -1,4 +1,4 @@
-.page-hero {
+.hero {
 	position: relative;
 	max-width: 480px;
 	min-height: 580px;
@@ -25,24 +25,90 @@
 				url(../images/hero-mobile-bg@2x.jpg);
 			;
 		}
+@media screen and (min-width:$tablet) {
+	background-image: none;
+}
 }
 
-.hero-container {
+.hero__container {
 	@extend %container;
+	display: flex;
 }
 
-.hero-social-wrapper {
+.hero__social-wrapper {
 	display: none;
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: space-between;
-	// min-width: 100px;
+	@media screen and (min-width: $tablet) {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: center;
+			width: 90px;
+			padding-bottom: 30px;
+			margin-right: 20px;
+	
+		}
 }
 
-.hero {
+.hero__small-social-list {
+	transform: rotate(-90deg) translateX(50%);
+}
+
+.hero__discription {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+	justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+	
+		@media screen and (min-width:$tablet) {
+			padding: 0 20px;
+			width: 570px;
+			min-height: 680px;
+	
+			background-position: right;
+			background-image:
+				linear-gradient(to right,
+					$hero-gradient-color,
+					$hero-gradient-color),
+				url(../images/hero-tablet-bg.jpg);
+	
+			@media (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+				background-image:
+					linear-gradient(to right,
+						$hero-gradient-color,
+						$hero-gradient-color),
+					url(../images/hero-tablet-bg@2x.jpg);
+				;
+			}
+		}
+	
+		@media screen and (min-width:$desktop) {
+			padding: 0 20px 0 100px;
+			width: 1070px;
+			min-height: 680px;
+			align-items: flex-start;
+	
+			background-position: right;
+			background-image:
+				linear-gradient(to right,
+					$hero-gradient-color,
+					$hero-gradient-color),
+				url(../images/hero-tablet-bg.jpg);
+	
+			@media (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+				background-image:
+					linear-gradient(to right,
+						$hero-gradient-color,
+						$hero-gradient-color),
+					url(../images/hero-tablet-bg@2x.jpg);
+				;
+			}
+		}
 }
 
 .hero__pre-title {
@@ -62,6 +128,9 @@
 			font-size: 40px;
 		}
 
+																																																																																																																																																																																																																																																																@media screen and (min-width: $desktop) {
+																																																																																																																																																																																																																																																																	font-size: 72px;
+																																																																																																																																																																																																																																																																}
 }
 
 .hero__text {
@@ -69,4 +138,8 @@
 	line-height: 1.6;
 	max-width: 336px;
 	color: $light-secondary-color;
+	@media screen and (min-width: $desktop) {
+			font-size: 18px;
+			max-width: 360px;
+		}
 }

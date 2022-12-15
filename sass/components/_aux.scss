@@ -9,10 +9,30 @@
 .aux__pre-title {
     @extend %pre-title;
     margin-bottom: 71px;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 44px;
+
+    }
 }
 
-.aux__images {
+.aux-images {
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    @media screen and (min-width: $tablet) {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+.aux-images__item {
+    @media screen and (min-width: $tablet) {
+        flex-basis: calc((100% - 30px)/2);
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-basis: calc((100% - 90px)/4);
+    }
 }

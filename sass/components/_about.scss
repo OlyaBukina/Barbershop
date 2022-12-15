@@ -10,14 +10,30 @@
 
 .about__img {
     display: none;
-    // display: flex;
-    // gap: 30px;
+    @media screen and (min-width: $tablet) {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    
+        @media screen and (min-width: $desktop) {
+            flex-direction: row;
+            flex-basis: calc((100% - 30px)/2);
+        }
 }
 
 .about__description {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @media screen and (min-width:$tablet) {
+            width: 330px;
+        }
+    
+        @media screen and (min-width: $desktop) {
+            flex-basis: calc((100% - 30px)/2);
+            padding-right: 85px;
+        }
 }
 
 .about__pre-title {
@@ -29,8 +45,7 @@
 
 .about__title {
     @extend %title;
-    font-size: 28px;
-}
+    }    
 
 .about__after-title {
     @extend %after-title;
@@ -48,4 +63,7 @@
     &:hover {
         color: $light-main-color;
     }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @media screen and (min-width: $tablet) {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    margin-top: auto;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
 }

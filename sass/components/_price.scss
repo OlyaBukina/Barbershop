@@ -2,18 +2,46 @@
     @extend %section-padding;
     min-height: 692px;
     max-width: 480px;
-        margin: 0 auto;
+    margin: 0 auto;
         background-image: url(../images/price-mobile-bg.png),
         linear-gradient(to right, rgba(17, 19, 25, 1), rgba(17, 19, 25, 1));
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
+    (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
             background-image: url(../images/price-mobile-bg@2x.png),
                 linear-gradient(to right, rgba(17, 19, 25, 1), rgba(17, 19, 25, 1));
         }
+@media screen and (min-width: $tablet) {
+    min-height: 856px;
+    max-width: $tablet;
+    background-image: url(../images/price-tablet-bg.png),
+        linear-gradient(to right, rgba(17, 19, 25, 1), rgba(17, 19, 25, 1));
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url(../images/price-tablet-bg@2x.png),
+            linear-gradient(to right, rgba(17, 19, 25, 1), rgba(17, 19, 25, 1));
+    }
+}
+
+@media screen and (min-width: $desktop) {
+    min-height: 692px;
+    max-width: 1600px;
+    background-image: url(../images/price-desktop-bg.png),
+        linear-gradient(to right, rgba(17, 19, 25, 1), rgba(17, 19, 25, 1));
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url(../images/price-desktop-bg@2x.png),
+            linear-gradient(to right, rgba(17, 19, 25, 1), rgba(17, 19, 25, 1));
+    }
+}
 }
 
 .price__container {
@@ -39,14 +67,24 @@
     font-size: 40px;
     margin-bottom: 44px;
     color: $light-main-color;
+
     @media screen and (max-width: 374px) {
-            font-size: 36px;
+        font-size: 36px;
         }
+@media screen and (min-width: $tablet) {
+    font-size: 42px;
+}
 }
 
 .price-section {
     padding: 30px 20px;
     background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+@media screen and (min-width: $desktop) {
+        background: none;
+        display: flex;
+        gap: 30px;
+        padding: 0;
+    }
 }
 
 
@@ -54,26 +92,48 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
-    // flex-basis: calc((100% - 30px) / 2);
     gap: 20px;
+@media screen and (min-width: $desktop) {
+        padding: 30px 20px;
+        flex-basis: calc((100% - 30px) / 2);
+        background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+    }
 }
 
 .price-list__item {
     display: flex;
     justify-content: space-between;
+    align-items: baseline
 }
+
 .price-list__text {
     @extend %text;
     color: $light-secondary-color;
     line-height: 1.7;
+
     @media screen and (max-width:374px) {
-            font-size: 11px;
+        font-size: 11px;
         }
+@media screen and (min-width:$tablet) {
+    font-size: 18px;
+}
 }
 
 .price__button {
     color: $light-main-color;
-    margin: 22px auto 0;
+    margin: 44px auto 0;
+    }
+    
+    .price-list__item::before {
+        content: " ";
+        height: 1px;
+        display: block;
+        flex-grow: 1;
+        background: rgba(157, 164, 189, 0.12);
+        margin: 0 12px;
 
+}
 
+.price-list--order {
+    order: -1;
 }
